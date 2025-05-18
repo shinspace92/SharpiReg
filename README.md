@@ -12,7 +12,7 @@ Originality credits go to @[nukingdragons](www.github.com/NukingDragons/invisreg
 ![alt text](<media/sharpireg usage and value creation 2.png>)
 
 ## Video Showcase
-<video controls src="media/showcase.mp4" title="Title"></video>
+https://github.com/user-attachments/assets/a6ae0d65-3c65-4f6e-ae2c-f7822b720991
 
-## Detection
+## Detection              
 Utilize ETW, or forensic tools other than `Regedit.exe` or `reg` to triage and examine registry manipulation. 
