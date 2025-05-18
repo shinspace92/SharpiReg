@@ -1,0 +1,33 @@
+# Load the C# assembly for SharpiReg
+alias sharpireg {
+    local('$args');
+    
+    # Combine all arguments after the first into a single string
+    $args = substr($0, indexOf($0, " ") + 1);
+    
+    btask($1, "Tasked beacon to run sharpireg " . $args);
+    
+    # Execute the assembly with the provided arguments
+    bexecute_assembly($1, script_resource("sharpireg.exe"), $args);
+}
+
+beacon_command_register(
+    "sharpireg",
+    "Registry manipulation tool using C# assembly",
+    "Registry manipulation tool using C# assembly
+
+Usage: 
+  sharpireg create <regPath> <valueName> <valueData>
+  sharpireg list <regPath>
+  sharpireg delete-index <regPath> <index>
+  
+Note: regPath must begin with HKLM\\ or HKCU\\
+
+Examples:
+  sharpireg create HKLM\\Software\\Microsoft\\Windows\\Test TestValue 123
+  sharpireg list HKCU\\Software\\Microsoft\\Windows
+  sharpireg delete-index HKLM\\Software\\Microsoft\\Windows\\Test 0
+
+[] = Required Argument
+<> = Optional Argument"
+);
