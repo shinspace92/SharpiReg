@@ -1,5 +1,5 @@
 # SharpiReg
-Invisible registry manipulation tool written in C#. Works as a bof on C2 frameworks such as Cobaltstrike.
+Invisible registry manipulation tool written in C#. Also provides a simple `.cna` script to call `execute-assembly` in Cobaltstrike.
 
 Originality credits go to [nukingdragons](https://github.com/NukingDragons/invisreg)!
 
